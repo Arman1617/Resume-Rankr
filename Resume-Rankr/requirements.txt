@@ -1,0 +1,6 @@
+Flask==2.2.3
+spacy==3.5.2
+scikit-learn==1.2.0
+numpy==1.23.5
+pandas==1.5.3
+python-docx==0.8.11
