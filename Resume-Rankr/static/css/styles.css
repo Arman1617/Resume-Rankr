@@ -1,0 +1,23 @@
+/* General Reset */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #003366, #00509e);
+    color: white;
+}
+
+/* Cards */
+.card {
+    border-radius: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+}

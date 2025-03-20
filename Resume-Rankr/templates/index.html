@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Rankr</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="bg-primary text-white text-center py-5 shadow-sm">
+        <h1 class="display-4">Resume Rankr</h1>
+        <p class="lead">Rank resumes and find the best match for your job description using AI-powered analysis.</p>
+    </header>
+
+    <!-- Main Form Section -->
+    <div class="container my-5">
+        <div class="card shadow p-4">
+            <h2 class="text-center mb-4">Upload Resumes</h2>
+            <form action="/" method="post" enctype="multipart/form-data" id="resume-form">
+                <div class="mb-3">
+                    <label for="job_description" class="form-label">Job Description:</label>
+                    <textarea name="job_description" id="job_description" rows="4" class="form-control" placeholder="Paste the job description here" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="resume_files" class="form-label">Upload Resumes:</label>
+                    <input type="file" name="resume_files" id="resume_files" class="form-control" accept=".docx" multiple required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Analyze Resumes</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    {% if results %}
+    <div class="container my-5">
+        <div class="card shadow p-4">
+            <h2 class="text-center mb-4">Ranked Resumes</h2>
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Similarity (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for result in results %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ result[0][0] }}</td>
+                        <td>{{ result[1][0] }}</td>
+                        <td>{{ result[2] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="text-center mt-3">
+                <a href="{{ url_for('download_csv') }}" class="btn btn-success">Download CSV</a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">Created by Stuti Goyal, Arman Shrivastav, and Harsh Vardhan Singh</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
