@@ -22,3 +22,37 @@ First, download the project by cloning it from GitHub:
 ```bash
 git clone https://github.com/Arman1617/Resume-Rankr.git
 cd Resume-Rankr
+Step 2: Set Up a Virtual Environment (Optional but Recommended)
+Using a virtual environment helps manage dependencies properly.
+
+bash
+Copy
+Edit
+python -m venv env
+Activate the virtual environment:
+
+Windows:
+bash
+Copy
+Edit
+env\Scripts\activate
+macOS/Linux:
+bash
+Copy
+Edit
+source env/bin/activate
+Step 3: Install Dependencies
+Install the required Python packages using:
+
+bash
+Copy
+Edit
+pip install -r requirements.txt
+Step 4: Download SpaCy NLP Model
+Since the project uses spaCy for NLP tasks, download the necessary model:
+
+bash
+Copy
+Edit
+python -m spacy download en_core_web_sm
+
