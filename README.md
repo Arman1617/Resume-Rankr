@@ -15,6 +15,7 @@ Resume-Rankr is a web-based application that helps recruiters rank resumes based
 
 ---
 
+
 # 📥 Installation & Setup
 
 Follow the steps below to set up the **Resume-Rankr** project on your local machine.
@@ -82,7 +83,9 @@ This will install the small English NLP model required for extracting names and 
 
 ---
 
-## **Step 5: Run the Flask Application**
+# 🚀 Usage Guide
+
+## **Step 1: Run the Flask Application**
 Now that everything is installed, start the web application by running:
 
 ```bash
@@ -94,7 +97,7 @@ After running this command, the app will be available locally at:
 
 ---
 
-## **Step 6: Upload Resumes & Job Description**
+## **Step 2: Upload Resumes & Job Description**
 1. Open the web app in your browser.
 2. Upload one or more `.docx` resume files.
 3. Enter the job description.
@@ -102,7 +105,7 @@ After running this command, the app will be available locally at:
 
 ---
 
-## **Step 7: Download Ranked Resumes as CSV**
+## **Step 3: Download Ranked Resumes as CSV**
 After ranking, you can download the results in CSV format.
 
 1. Click the **Download CSV** button.
@@ -110,20 +113,64 @@ After ranking, you can download the results in CSV format.
 
 ---
 
-## **Step 8: Deactivate the Virtual Environment (Optional)**
-When you're done working with the project, you can deactivate the virtual environment by running:
-
-```bash
-deactivate
+# 📂 Project Structure
 ```
-
-To reactivate it in the future, use the activation command from **Step 2**.
+Resume-Rankr/
+│-- app.py                 # Main Flask application
+│-- templates/             # HTML Templates
+│   ├── index.html         # Main UI page
+│   ├── features.html      # Features page
+│   ├── team.html          # Team page
+│   ├── contact.html       # Contact page
+│-- static/                # Static files (CSS, JS, Images)
+│-- uploads/               # Directory for uploaded resumes
+│-- requirements.txt       # Required dependencies
+│-- README.md              # Documentation
+```
 
 ---
 
-## ✅ **Installation Complete!**
+# 🛠 Technologies Used
+This project utilizes the following technologies:
+
+- **Python** - Programming Language
+- **Flask** - Web Framework
+- **spaCy** - Natural Language Processing
+- **scikit-learn** - Machine Learning Algorithms
+- **HTML, CSS** - Frontend Development
+- **Bootstrap** - Styling and Layout
+
+---
+
+# 🤝 Contributing
+Contributions are welcome! Follow these steps to contribute:
+
+1. **Fork** the repository.
+2. **Clone** your forked repository:
+   ```bash
+   git clone https://github.com/your-username/Resume-Rankr.git
+   ```
+3. **Create a new branch** for your feature:
+   ```bash
+   git checkout -b feature-branch
+   ```
+4. **Make changes** and commit:
+   ```bash
+   git add .
+   git commit -m "Added new feature"
+   ```
+5. **Push to your branch**:
+   ```bash
+   git push origin feature-branch
+   ```
+6. **Create a Pull Request** on GitHub.
+
+---
+
+## ✅ **Setup, Usage & Contribution Complete!**
 Your **Resume-Rankr** project is now fully set up and ready to use. 🚀  
 If you face any issues, feel free to check the project documentation or open an issue on GitHub.
 
 ---
+
 
