@@ -119,9 +119,6 @@ Resume-Rankr/
 │-- app.py                 # Main Flask application
 │-- templates/             # HTML Templates
 │   ├── index.html         # Main UI page
-│   ├── features.html      # Features page
-│   ├── team.html          # Team page
-│   ├── contact.html       # Contact page
 │-- static/                # Static files (CSS, JS, Images)
 │-- uploads/               # Directory for uploaded resumes
 │-- requirements.txt       # Required dependencies
